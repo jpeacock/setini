@@ -19,9 +19,10 @@ class SetIniTwigExtension extends \Twig_Extension
         );
     }
 
-    public function setIni($number)
+    // pass a param like 'memory_limit' and a value like '128M' to set this param for your page/template
+    public function setIni($param, $value)
     {
-        ini_set('memory_limit', $number."M");
-        return ini_get('memory_limit');
+        ini_set($param, $value);
+        return ini_get($param);
     }
 }
