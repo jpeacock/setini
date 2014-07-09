@@ -9,8 +9,9 @@ Throw the setini folder into your craft/plugins/ directory. In your template whe
 {% set display_errors = 'display_errors' | setIni(1) %}
 ```
 
-In this case, to check your memory usage, just echo out the variable:
+In this case, to check if it applied correctly, just echo out the variable:
 ```
 {{ memory_limit }}   
 {{ display_errors }}
 ```
+Note: This plugin will only work with Apache setup to use mod_php and does not work with PHP running as FastCGI. 
